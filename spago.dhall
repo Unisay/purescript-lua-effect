@@ -1,5 +1,5 @@
 { name = "purescript-lua-effect"
-, dependencies = [ "lua-prelude" ] 
+, dependencies = [ "prelude" ] 
 , packages = ./packages.dhall
 , sources = [ "src/**/*.purs" ]
 , backend =

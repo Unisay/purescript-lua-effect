@@ -1,1 +1,1 @@
-return { unsafePerformEffect = function(f) return f() end }
+return {unsafePerformEffect = (function(f) return f() end)}
