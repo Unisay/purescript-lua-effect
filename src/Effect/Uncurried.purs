@@ -151,71 +151,220 @@ foreign import data EffectFn4 :: Type -> Type -> Type -> Type -> Type -> Type
 
 type role EffectFn4 representational representational representational representational representational
 
-foreign import data EffectFn5 :: Type -> Type -> Type -> Type -> Type -> Type -> Type
+foreign import data EffectFn5
+  :: Type -> Type -> Type -> Type -> Type -> Type -> Type
 
 type role EffectFn5 representational representational representational representational representational representational
 
-foreign import data EffectFn6 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
+foreign import data EffectFn6
+  :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
 
 type role EffectFn6 representational representational representational representational representational representational representational
 
-foreign import data EffectFn7 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
+foreign import data EffectFn7
+  :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
 
 type role EffectFn7 representational representational representational representational representational representational representational representational
 
-foreign import data EffectFn8 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
+foreign import data EffectFn8
+  :: Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
 
 type role EffectFn8 representational representational representational representational representational representational representational representational representational
 
-foreign import data EffectFn9 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
+foreign import data EffectFn9
+  :: Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
 
 type role EffectFn9 representational representational representational representational representational representational representational representational representational representational
 
-foreign import data EffectFn10 :: Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type -> Type
+foreign import data EffectFn10
+  :: Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
+  -> Type
 
 type role EffectFn10 representational representational representational representational representational representational representational representational representational representational representational
 
-foreign import mkEffectFn1 :: forall a r.
-  (a -> Effect r) -> EffectFn1 a r
-foreign import mkEffectFn2 :: forall a b r.
-  (a -> b -> Effect r) -> EffectFn2 a b r
-foreign import mkEffectFn3 :: forall a b c r.
-  (a -> b -> c -> Effect r) -> EffectFn3 a b c r
-foreign import mkEffectFn4 :: forall a b c d r.
-  (a -> b -> c -> d -> Effect r) -> EffectFn4 a b c d r
-foreign import mkEffectFn5 :: forall a b c d e r.
-  (a -> b -> c -> d -> e -> Effect r) -> EffectFn5 a b c d e r
-foreign import mkEffectFn6 :: forall a b c d e f r.
-  (a -> b -> c -> d -> e -> f -> Effect r) -> EffectFn6 a b c d e f r
-foreign import mkEffectFn7 :: forall a b c d e f g r.
-  (a -> b -> c -> d -> e -> f -> g -> Effect r) -> EffectFn7 a b c d e f g r
-foreign import mkEffectFn8 :: forall a b c d e f g h r.
-  (a -> b -> c -> d -> e -> f -> g -> h -> Effect r) -> EffectFn8 a b c d e f g h r
-foreign import mkEffectFn9 :: forall a b c d e f g h i r.
-  (a -> b -> c -> d -> e -> f -> g -> h -> i -> Effect r) -> EffectFn9 a b c d e f g h i r
-foreign import mkEffectFn10 :: forall a b c d e f g h i j r.
-  (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> Effect r) -> EffectFn10 a b c d e f g h i j r
+foreign import mkEffectFn1
+  :: forall a r
+   . (a -> Effect r)
+  -> EffectFn1 a r
 
-foreign import runEffectFn1 :: forall a r.
-  EffectFn1 a r -> a -> Effect r
-foreign import runEffectFn2 :: forall a b r.
-  EffectFn2 a b r -> a -> b -> Effect r
-foreign import runEffectFn3 :: forall a b c r.
-  EffectFn3 a b c r -> a -> b -> c -> Effect r
-foreign import runEffectFn4 :: forall a b c d r.
-  EffectFn4 a b c d r -> a -> b -> c -> d -> Effect r
-foreign import runEffectFn5 :: forall a b c d e r.
-  EffectFn5 a b c d e r -> a -> b -> c -> d -> e -> Effect r
-foreign import runEffectFn6 :: forall a b c d e f r.
-  EffectFn6 a b c d e f r -> a -> b -> c -> d -> e -> f -> Effect r
-foreign import runEffectFn7 :: forall a b c d e f g r.
-  EffectFn7 a b c d e f g r -> a -> b -> c -> d -> e -> f -> g -> Effect r
-foreign import runEffectFn8 :: forall a b c d e f g h r.
-  EffectFn8 a b c d e f g h r -> a -> b -> c -> d -> e -> f -> g -> h -> Effect r
-foreign import runEffectFn9 :: forall a b c d e f g h i r.
-  EffectFn9 a b c d e f g h i r -> a -> b -> c -> d -> e -> f -> g -> h -> i -> Effect r
-foreign import runEffectFn10 :: forall a b c d e f g h i j r.
-  EffectFn10 a b c d e f g h i j r -> a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> Effect r
+foreign import mkEffectFn2
+  :: forall a b r
+   . (a -> b -> Effect r)
+  -> EffectFn2 a b r
+
+foreign import mkEffectFn3
+  :: forall a b c r
+   . (a -> b -> c -> Effect r)
+  -> EffectFn3 a b c r
+
+foreign import mkEffectFn4
+  :: forall a b c d r
+   . (a -> b -> c -> d -> Effect r)
+  -> EffectFn4 a b c d r
+
+foreign import mkEffectFn5
+  :: forall a b c d e r
+   . (a -> b -> c -> d -> e -> Effect r)
+  -> EffectFn5 a b c d e r
+
+foreign import mkEffectFn6
+  :: forall a b c d e f r
+   . (a -> b -> c -> d -> e -> f -> Effect r)
+  -> EffectFn6 a b c d e f r
+
+foreign import mkEffectFn7
+  :: forall a b c d e f g r
+   . (a -> b -> c -> d -> e -> f -> g -> Effect r)
+  -> EffectFn7 a b c d e f g r
+
+foreign import mkEffectFn8
+  :: forall a b c d e f g h r
+   . (a -> b -> c -> d -> e -> f -> g -> h -> Effect r)
+  -> EffectFn8 a b c d e f g h r
+
+foreign import mkEffectFn9
+  :: forall a b c d e f g h i r
+   . (a -> b -> c -> d -> e -> f -> g -> h -> i -> Effect r)
+  -> EffectFn9 a b c d e f g h i r
+
+foreign import mkEffectFn10
+  :: forall a b c d e f g h i j r
+   . (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> Effect r)
+  -> EffectFn10 a b c d e f g h i j r
+
+foreign import runEffectFn1
+  :: forall a r
+   . EffectFn1 a r
+  -> a
+  -> Effect r
+
+foreign import runEffectFn2
+  :: forall a b r
+   . EffectFn2 a b r
+  -> a
+  -> b
+  -> Effect r
+
+foreign import runEffectFn3
+  :: forall a b c r
+   . EffectFn3 a b c r
+  -> a
+  -> b
+  -> c
+  -> Effect r
+
+foreign import runEffectFn4
+  :: forall a b c d r
+   . EffectFn4 a b c d r
+  -> a
+  -> b
+  -> c
+  -> d
+  -> Effect r
+
+foreign import runEffectFn5
+  :: forall a b c d e r
+   . EffectFn5 a b c d e r
+  -> a
+  -> b
+  -> c
+  -> d
+  -> e
+  -> Effect r
+
+foreign import runEffectFn6
+  :: forall a b c d e f r
+   . EffectFn6 a b c d e f r
+  -> a
+  -> b
+  -> c
+  -> d
+  -> e
+  -> f
+  -> Effect r
+
+foreign import runEffectFn7
+  :: forall a b c d e f g r
+   . EffectFn7 a b c d e f g r
+  -> a
+  -> b
+  -> c
+  -> d
+  -> e
+  -> f
+  -> g
+  -> Effect r
+
+foreign import runEffectFn8
+  :: forall a b c d e f g h r
+   . EffectFn8 a b c d e f g h r
+  -> a
+  -> b
+  -> c
+  -> d
+  -> e
+  -> f
+  -> g
+  -> h
+  -> Effect r
+
+foreign import runEffectFn9
+  :: forall a b c d e f g h i r
+   . EffectFn9 a b c d e f g h i r
+  -> a
+  -> b
+  -> c
+  -> d
+  -> e
+  -> f
+  -> g
+  -> h
+  -> i
+  -> Effect r
+
+foreign import runEffectFn10
+  :: forall a b c d e f g h i j r
+   . EffectFn10 a b c d e f g h i j r
+  -> a
+  -> b
+  -> c
+  -> d
+  -> e
+  -> f
+  -> g
+  -> h
+  -> i
+  -> j
+  -> Effect r
 
 -- The reason these are written eta-expanded instead of as:
 -- ```
@@ -232,28 +381,52 @@ instance semigroupEffectFn2 :: Semigroup r => Semigroup (EffectFn2 a b r) where
   append f1 f2 = mkEffectFn2 \a b -> runEffectFn2 f1 a b <> runEffectFn2 f2 a b
 
 instance semigroupEffectFn3 :: Semigroup r => Semigroup (EffectFn3 a b c r) where
-  append f1 f2 = mkEffectFn3 \a b c -> runEffectFn3 f1 a b c <> runEffectFn3 f2 a b c
+  append f1 f2 = mkEffectFn3 \a b c -> runEffectFn3 f1 a b c <> runEffectFn3 f2
+    a
+    b
+    c
 
 instance semigroupEffectFn4 :: Semigroup r => Semigroup (EffectFn4 a b c d r) where
-  append f1 f2 = mkEffectFn4 \a b c d -> runEffectFn4 f1 a b c d <> runEffectFn4 f2 a b c d
+  append f1 f2 = mkEffectFn4 \a b c d -> runEffectFn4 f1 a b c d <> runEffectFn4
+    f2
+    a
+    b
+    c
+    d
 
 instance semigroupEffectFn5 :: Semigroup r => Semigroup (EffectFn5 a b c d e r) where
-  append f1 f2 = mkEffectFn5 \a b c d e -> runEffectFn5 f1 a b c d e <> runEffectFn5 f2 a b c d e
+  append f1 f2 = mkEffectFn5 \a b c d e -> runEffectFn5 f1 a b c d e <>
+    runEffectFn5 f2 a b c d e
 
-instance semigroupEffectFn6 :: Semigroup r => Semigroup (EffectFn6 a b c d e f r) where
-  append f1 f2 = mkEffectFn6 \a b c d e f -> runEffectFn6 f1 a b c d e f <> runEffectFn6 f2 a b c d e f
+instance semigroupEffectFn6 ::
+  Semigroup r =>
+  Semigroup (EffectFn6 a b c d e f r) where
+  append f1 f2 = mkEffectFn6 \a b c d e f -> runEffectFn6 f1 a b c d e f <>
+    runEffectFn6 f2 a b c d e f
 
-instance semigroupEffectFn7 :: Semigroup r => Semigroup (EffectFn7 a b c d e f g r) where
-  append f1 f2 = mkEffectFn7 \a b c d e f g -> runEffectFn7 f1 a b c d e f g <> runEffectFn7 f2 a b c d e f g
+instance semigroupEffectFn7 ::
+  Semigroup r =>
+  Semigroup (EffectFn7 a b c d e f g r) where
+  append f1 f2 = mkEffectFn7 \a b c d e f g -> runEffectFn7 f1 a b c d e f g <>
+    runEffectFn7 f2 a b c d e f g
 
-instance semigroupEffectFn8 :: Semigroup r => Semigroup (EffectFn8 a b c d e f g h r) where
-  append f1 f2 = mkEffectFn8 \a b c d e f g h -> runEffectFn8 f1 a b c d e f g h <> runEffectFn8 f2 a b c d e f g h
+instance semigroupEffectFn8 ::
+  Semigroup r =>
+  Semigroup (EffectFn8 a b c d e f g h r) where
+  append f1 f2 = mkEffectFn8 \a b c d e f g h -> runEffectFn8 f1 a b c d e f g h
+    <> runEffectFn8 f2 a b c d e f g h
 
-instance semigroupEffectFn9 :: Semigroup r => Semigroup (EffectFn9 a b c d e f g h i r) where
-  append f1 f2 = mkEffectFn9 \a b c d e f g h i -> runEffectFn9 f1 a b c d e f g h i <> runEffectFn9 f2 a b c d e f g h i
+instance semigroupEffectFn9 ::
+  Semigroup r =>
+  Semigroup (EffectFn9 a b c d e f g h i r) where
+  append f1 f2 = mkEffectFn9 \a b c d e f g h i ->
+    runEffectFn9 f1 a b c d e f g h i <> runEffectFn9 f2 a b c d e f g h i
 
-instance semigroupEffectFn10 :: Semigroup r => Semigroup (EffectFn10 a b c d e f g h i j r) where
-  append f1 f2 = mkEffectFn10 \a b c d e f g h i j -> runEffectFn10 f1 a b c d e f g h i j <> runEffectFn10 f2 a b c d e f g h i j
+instance semigroupEffectFn10 ::
+  Semigroup r =>
+  Semigroup (EffectFn10 a b c d e f g h i j r) where
+  append f1 f2 = mkEffectFn10 \a b c d e f g h i j ->
+    runEffectFn10 f1 a b c d e f g h i j <> runEffectFn10 f2 a b c d e f g h i j
 
 instance monoidEffectFn1 :: Monoid r => Monoid (EffectFn1 a r) where
   mempty = mkEffectFn1 \_ -> mempty
@@ -282,5 +455,7 @@ instance monoidEffectFn8 :: Monoid r => Monoid (EffectFn8 a b c d e f g h r) whe
 instance monoidEffectFn9 :: Monoid r => Monoid (EffectFn9 a b c d e f g h i r) where
   mempty = mkEffectFn9 \_ _ _ _ _ _ _ _ _ -> mempty
 
-instance monoidEffectFn10 :: Monoid r => Monoid (EffectFn10 a b c d e f g h i j r) where
+instance monoidEffectFn10 ::
+  Monoid r =>
+  Monoid (EffectFn10 a b c d e f g h i j r) where
   mempty = mkEffectFn10 \_ _ _ _ _ _ _ _ _ _ -> mempty
