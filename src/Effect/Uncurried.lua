@@ -196,7 +196,7 @@ return {
                     return function(i)
                       return function(j)
                         return function()
-                          return fn(a, b, c, d, e, f, g, h, i)
+                          return fn(a, b, c, d, e, f, g, h, i, j)
                         end
                       end
                     end
