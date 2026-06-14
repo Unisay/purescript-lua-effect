@@ -40,8 +40,8 @@ return {
   foreachE = (function(as)
     return function(f)
       return function()
-        for i, v in ipairs(as) do
-          f(v)()
+        for i = 1, #as do
+          f(as[i])()
         end
       end
     end
